@@ -53,8 +53,8 @@ loop.close()
 
 @app.route('/')
 async def homepage(request):
-    html_file = path / 'view' / 'index.html'
-    return HTMLResponse(html_file.open().read())
+    # html_file = path / 'view' / 'index.html'
+    return JSONResponse({'state': 'working'})
 
 
 @app.route('/analyze', methods=['POST'])
